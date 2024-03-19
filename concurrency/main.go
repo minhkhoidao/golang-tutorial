@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func printNum() {
 	for i := 0; i < 26; i++ {
@@ -17,4 +20,5 @@ func printChar() {
 func main() {
 	go printChar()
 	go printNum()
+	time.Sleep(3 * time.Second)
 }
